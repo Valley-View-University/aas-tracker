@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login and Signup */
+:root{
+    --brand-blue: #2F8EE4;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    height: 25vh !important;
+    animation: slide-down 2s alternate forwards;
+}
+
+.container h1{
+    margin-top: 10px;
+    animation: slide-down 1s alternate forwards;
+}
+
+.container p{
+    animation: slide-down 1s alternate forwards;
+}
+
+.container .started-btn{
+    animation: slide-down 1.2s alternate forwards;
+    background-color: var(--brand-blue);
+    margin-top: 30px;
+    padding: 10px 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container .started-btn:hover{
+    background-color: #256daf;
+}
+
+.container form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container form input{
+    padding: 7px 15px;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.container form .login-btn{
+    background-color: var(--brand-blue) !important;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.container form .login-btn:hover{
+    background-color: #256daf !important;
+}
+
+@keyframes slide-down {
+    from{
+        transform: translatey(-100px);
+    }
+    to{
+        transform: translatey(0px);
+    }
+}
+
+/* login and signup end*/
