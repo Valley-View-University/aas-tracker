@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+}
+.nav-bar{
+    height: 60px;
+    width: 100%;
+    background-color: green;
+}
+
+.inner-container{
+    height: calc(100% - 60px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+}
+
+
+.side-bar{
+    height: 100%;
+    /* flex-basis: 20%; */
+    background-color: blue;
+}
+
+.side-bar ul{
+    list-style: none;
+    padding: 0 20px;
+}
+
+.side-bar ul li{
+    margin: 20px 0;
+}
+
+.content{
+    /* height: 100%;*/
+    background-color: red;
+    width: 100%;
+}
