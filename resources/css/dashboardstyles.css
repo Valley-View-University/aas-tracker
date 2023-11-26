@@ -81,3 +81,64 @@
     background: #F6F9FF;
     width: 100%;
 }
+
+
+.container{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #012970;
+    display: grid;
+
+}
+
+#courses{
+    width: 20%;
+    height: 50px;
+    border: 1px solid #8d35c0;
+    outline: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px
+}
+
+#Section{
+    width: 20%;
+    height: 50px;
+    border: 1px solid #8d35c0;
+    outline: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px
+}
+
+#Month{
+    width: 20%;
+    height: 50px;
+    border: 1px solid #8d35c0;
+    outline: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px
+}
+
+#Year{
+    width: 20%;
+    height: 50px;
+    border: 1px solid #8d35c0;
+    outline: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px
+}
+
+#button{
+width: 20%;
+  height: 50px;
+  border: 1px solid #8d35c0;
+  outline: 0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  background-color: #012970;
+  color:aliceblue;
+}
