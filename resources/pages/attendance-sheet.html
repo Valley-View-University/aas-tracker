@@ -24,7 +24,7 @@
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M14.5 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V7.5L14.5 2Z" stroke="#012970" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M14 2V8H20M8 13H10M8 17H10M14 13H16M14 17H16" stroke="#012970" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg><a href="./attendance-sheet.html">  Attendance Sheet</a></li>
+                      </svg><a href="#attendance-sheet">  Attendance Sheet</a></li>
 
                       <li><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                           <path d="M7.25829 23.075C7.05968 22.8764 6.96038 22.6236 6.96038 22.3167C6.96038 22.0097 7.05968 21.7569 7.25829 21.5583L12.4312 16.3583C12.8465 15.9431 13.3611 15.7354 13.975 15.7354C14.5888 15.7354 15.1034 15.9431 15.5187 16.3583L17.7666 18.6062L22.6145 13.7583C22.8312 13.5417 23.084 13.4333 23.3729 13.4333C23.6618 13.4333 23.9145 13.5417 24.1312 13.7583C24.3479 13.975 24.4562 14.2321 24.4562 14.5297C24.4562 14.8279 24.3479 15.0854 24.1312 15.3021L19.3104 20.15C18.8951 20.5653 18.3852 20.7729 17.7807 20.7729C17.1755 20.7729 16.6652 20.5653 16.25 20.15L13.975 17.875L8.77496 23.075C8.57635 23.2736 8.3279 23.3773 8.02963 23.3859C7.73207 23.3953 7.47496 23.2917 7.25829 23.075ZM4.33329 22.75C3.73746 22.75 3.22757 22.538 2.80363 22.1141C2.37896 21.6894 2.16663 21.1792 2.16663 20.5833V5.41667C2.16663 4.82083 2.37896 4.31058 2.80363 3.88592C3.22757 3.46197 3.73746 3.25 4.33329 3.25H19.5C20.0958 3.25 20.606 3.46197 21.0307 3.88592C21.4547 4.31058 21.6666 4.82083 21.6666 5.41667V9.75C21.6666 10.0569 21.5626 10.3141 21.3546 10.5213C21.1473 10.7293 20.8902 10.8333 20.5833 10.8333H4.33329V20.5833V22.75ZM4.33329 8.66667H19.5V5.41667H4.33329V8.66667Z" fill="#012970"/>
@@ -53,7 +53,39 @@
                 </ul>
             </div>
             <div class="content">
-               
+                <h1>Attendance Sheet</h1>
+                <div class="attendance-sheet">
+                    <!-- <p>Enter your course</p>  -->
+                    <input type="text" placeholder="course" id="qrText">
+                    <!-- <p>Enter your section</p>  -->
+                    <input type="text" placeholder="section" id="qrTextii">
+                    <!-- <p>Enter your text or URL</p>  -->
+                    <input type="text" placeholder="Text or URL" id="qrTextiii">
+                    <button onclick="generateQR()">Generate QR Code</button>
+                    
+                    <div id='imgBox'> 
+                         <img src="" id="qrImgBox">
+                    </div>
+            
+                    <footer>This is made with 💓 from Accra By Michelle</footer>
+                 </div>
+            
+            
+                <script>
+                    function generateQR() {
+                        // Get values from input fields
+                        let course = document.getElementById('qrText').value;
+                        let section = document.getElementById('qrTextii').value;
+                        let textOrUrl = document.getElementById('qrTextiii').value;
+            
+                        // Combine values to create a string for the QR code
+                        let qrText = `Course: ${course}\nSection: ${section}\n${textOrUrl}`;
+            
+                        // Generate the QR code and update the image source
+                        let qrImg = document.getElementById('qrImgBox');
+                        qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(qrText);
+                    }
+                </script>
             </div>
         </div>
     </div>

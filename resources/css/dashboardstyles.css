@@ -13,7 +13,7 @@
     height: 60px;
     width: 100%;
     /* background-color: rgba(145, 251, 230, 0.5); */
-    background: #b7b6b6;
+    background: rgb(135, 205, 235);
     box-shadow: 0px 2px 20px 0px rgba(1, 41, 112, 0.10);
 }
 
@@ -58,7 +58,7 @@
 .side-bar{
     height: 100%;
     /* flex-basis: 20%; */
-    background: #a7a5a5;
+    background: skyblue;
     box-shadow: 0px 0px 20px 0px rgba(1, 41, 112, 0.10);
 }
 
@@ -80,4 +80,104 @@
     /* height: 100%;*/
     background: #F6F9FF;
     width: 100%;
+}
+
+.attendance-sheet {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+    margin: 100px 0;
+    justify-content: center;
+    /* width: 400px;
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px */
+}
+
+.attendance-sheet p {
+    display: inline;
+    font-family: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.attendance-sheet input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid skyblue;
+    outline: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.attendance-sheet button {
+    width: 100%;
+    height: 50px;
+    background: #a780be;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.attendance-sheet button:hover {
+    background: #8d35c0;
+}
+
+#imgBoxK{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: skyblue;
+    color: black;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .attendance-sheet {
+        width: 300px;
+    }
+    
+    .attendance-sheet h1 {
+        font-size: 25px;
+    }
+
+    .attendance-sheet p {
+        font-size: 13px;
+    }
+
+    .attendance-sheet input {
+        font-size: 13px;
+    }  
+    
+    .attendance-sheet button {
+        font-size: 13px;
+    }   
+
+    .attendance-sheet button:hover {
+        font-size: 13px;
+    }
+
+    .attendance-sheet button:active {
+        font-size: 13px;
+    }   
 }
